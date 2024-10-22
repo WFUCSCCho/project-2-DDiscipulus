@@ -164,7 +164,7 @@ public class AvlTree<AnyType extends Comparable<? super AnyType>> {
         } else if (compareResult > 0) {
             t.right = insert(x, t.right);
 
-        } else{
+        } else {
             // duplicate do nothing
     }
         return balance(t);
@@ -220,7 +220,13 @@ public class AvlTree<AnyType extends Comparable<? super AnyType>> {
      * Update heights, then return new root.
      */
     private AvlNode<AnyType> rotateWithLeftChild( AvlNode<AnyType> k2 ) {
-	// FINISH ME
+        // finished
+	AvlNode<AnyType> k1 = k2.left;
+    k2.left = k1.right;
+    k1.right = k2;
+    k2.height = Math.max((height(k2.left)), height(k2.right)) + 1;
+    k1.height = Math.max((height(k1.left)), k2.height) + 1;
+    return k1;
     }
 
     /**
@@ -239,7 +245,10 @@ public class AvlTree<AnyType extends Comparable<? super AnyType>> {
      * Update heights, then return new root.
      */
     private AvlNode<AnyType> doubleWithLeftChild( AvlNode<AnyType> k3 ) {
-	// FINISH ME
+        //finished
+        k3.left = rotateWithLeftChild(k3.left);
+        return rotateWithLeftChild(k3);
+
     }
 
     /**
@@ -249,7 +258,10 @@ public class AvlTree<AnyType extends Comparable<? super AnyType>> {
      * Update heights, then return new root.
      */
     private AvlNode<AnyType> doubleWithRightChild( AvlNode<AnyType> k1 ) {
-	// FINISH ME
+	// started
+        k1.left = rotateWithLeftChild(k1.right);
+        return rotateWithRightChild(k1);
+
     }
 
     private static class AvlNode<AnyType> {
@@ -274,48 +286,3 @@ public class AvlTree<AnyType extends Comparable<? super AnyType>> {
     /** The tree root. */
     private AvlNode<AnyType> root;
 }
-
-/* \
-    private static class AvlNode<AnyType> {
-        AnyType element;
-        AvlNode<AnyType> left;
-        AvlNode<AnyType> right;
-        int height;
-
-        AvlNode(AnyType theElement) {
-            this(theElement, null, null);
-        }
-
-        AvlNode(AnyType theElement, AvlNode<AnyType> lt, AvlNode<AnyType> rt) {
-            element = theElement;
-            left = lt;
-            right = rt;
-            height = 0;
-        }
-
-        // stores height info
-        private int height(AvlNode<AnyType> t) {
-            return t == null ? -1 : t.height;
-        }
-
-    public AvlTree( ) {
-        root = null;
-    }
-
-    /**
-     * Insert into the tree; duplicates are ignored.
-     * @param x the item to insert.
-     *
-public void insert( AnyType x ) {
-    //root = insert( x, root );
-    if (root == null){
-        return new AvlN
-    }
-    int compareResult = x.compareTo(root.element);
-    if(compareResult < 0) {
-
-    }
-}
-    }
-
- */
