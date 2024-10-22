@@ -27,6 +27,11 @@ public class AvlTree<AnyType extends Comparable<? super AnyType>> {
         root = null;
     }
 
+
+    public AvlTree( ) {
+        root = null;
+    }
+
     /**
      * Insert into the tree; duplicates are ignored.
      * @param x the item to insert.
@@ -113,6 +118,12 @@ public class AvlTree<AnyType extends Comparable<? super AnyType>> {
     // Assume t is either balanced or within one of being balanced
     private AvlNode<AnyType> balance( AvlNode<AnyType> t ) {
 	// FINISH ME
+        if(t == null){
+            return t;
+        }
+        if((height(t.left) - height(t.right ) > 1)|| (height(t.left.left)>= height(t.left.right)){
+            t = rotateWithRightChild(t);
+        }
     }
 
     public void checkBalance( ) {
@@ -142,8 +153,23 @@ public class AvlTree<AnyType extends Comparable<? super AnyType>> {
      * @return the new root of the subtree.
      */
     private AvlNode<AnyType> insert( AnyType x, AvlNode<AnyType> t ) {
-	// FINISH ME
+        //root = insert( x, root );
+        if (root == null) {
+            return new AvlNode<>(x, null, null);
+        }
+        int compareResult = x.compareTo(t.element);
+        if (compareResult < 0) {
+            t.left = insert(x, t.left);
+
+        } else if (compareResult > 0) {
+            t.right = insert(x, t.right);
+
+        } else{
+            // duplicate do nothing
     }
+        return balance(t);
+    }
+
 
     /**
      * Internal method to find the smallest item in a subtree.
@@ -248,3 +274,48 @@ public class AvlTree<AnyType extends Comparable<? super AnyType>> {
     /** The tree root. */
     private AvlNode<AnyType> root;
 }
+
+/* \
+    private static class AvlNode<AnyType> {
+        AnyType element;
+        AvlNode<AnyType> left;
+        AvlNode<AnyType> right;
+        int height;
+
+        AvlNode(AnyType theElement) {
+            this(theElement, null, null);
+        }
+
+        AvlNode(AnyType theElement, AvlNode<AnyType> lt, AvlNode<AnyType> rt) {
+            element = theElement;
+            left = lt;
+            right = rt;
+            height = 0;
+        }
+
+        // stores height info
+        private int height(AvlNode<AnyType> t) {
+            return t == null ? -1 : t.height;
+        }
+
+    public AvlTree( ) {
+        root = null;
+    }
+
+    /**
+     * Insert into the tree; duplicates are ignored.
+     * @param x the item to insert.
+     *
+public void insert( AnyType x ) {
+    //root = insert( x, root );
+    if (root == null){
+        return new AvlN
+    }
+    int compareResult = x.compareTo(root.element);
+    if(compareResult < 0) {
+
+    }
+}
+    }
+
+ */
