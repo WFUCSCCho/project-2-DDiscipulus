@@ -214,7 +214,7 @@ public class AvlTree<AnyType extends Comparable<? super AnyType>> {
         }
         return findMax(t.right);
     }
-    }
+
 
     /**
      * Internal method to find an item in a subtree.
