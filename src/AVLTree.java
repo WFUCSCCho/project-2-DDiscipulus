@@ -117,14 +117,31 @@ public class AvlTree<AnyType extends Comparable<? super AnyType>> {
 
     // Assume t is either balanced or within one of being balanced
     private AvlNode<AnyType> balance( AvlNode<AnyType> t ) {
-	// FINISH ME
-        if(t == null){
-            return t;
+        // finished (courtesy of slide 9 on AVL)
+        if (t == null) return t;
+
+        // case 1
+        if (height(t.left) - height(t.right) > ALLOWED_IMBALANCE) {
+            if (height(t.left.left) >= height(t.left.right)) {
+                t = rotateWithLeftChild(t);
+            } else {
+                // case 2
+                t = doubleWithLeftChild(t); // Double rotation
+            }
+        } else if (height(t.right) - height(t.left) > ALLOWED_IMBALANCE) {
+            // case 4
+            if (height(t.right.right) >= height(t.right.left)) {
+                t = rotateWithRightChild(t); // Single rotation
+            } else {
+                // case 3
+                t = doubleWithRightChild(t); // Double rotation
+            }
         }
-        if((height(t.left) - height(t.right ) > 1)|| (height(t.left.left)>= height(t.left.right)){
-            t = rotateWithRightChild(t);
-        }
+
+        t.height = Math.max(height(t.left), height(t.right)) + 1;
+        return t;
     }
+
 
     public void checkBalance( ) {
         checkBalance( root );
@@ -153,6 +170,7 @@ public class AvlTree<AnyType extends Comparable<? super AnyType>> {
      * @return the new root of the subtree.
      */
     private AvlNode<AnyType> insert( AnyType x, AvlNode<AnyType> t ) {
+        //finished (courtesy of slide 9 on AVL
         //root = insert( x, root );
         if (root == null) {
             return new AvlNode<>(x, null, null);
