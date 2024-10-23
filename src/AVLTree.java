@@ -195,7 +195,11 @@ public class AvlTree<AnyType extends Comparable<? super AnyType>> {
      * @return node containing the smallest item.
      */
     private AvlNode<AnyType> findMin( AvlNode<AnyType> t ) {
-	// FINISH ME
+	/// go all the way to left and return
+        if (t.left == null) {
+            return t; //
+        }
+        return findMin(t.left);
     }
 
     /**
@@ -204,7 +208,12 @@ public class AvlTree<AnyType extends Comparable<? super AnyType>> {
      * @return node containing the largest item.
      */
     private AvlNode<AnyType> findMax( AvlNode<AnyType> t ) {
-	// FINISH
+	// Finished
+        if (t.right == null) {
+            return t;
+        }
+        return findMax(t.right);
+    }
     }
 
     /**
