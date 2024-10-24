@@ -28,10 +28,6 @@ public class AvlTree<AnyType extends Comparable<? super AnyType>> {
     }
 
 
-    public AvlTree( ) {
-        root = null;
-    }
-
     /**
      * Insert into the tree; duplicates are ignored.
      * @param x the item to insert.
@@ -56,7 +52,27 @@ public class AvlTree<AnyType extends Comparable<? super AnyType>> {
      * @return the new root of the subtree.
      */
     private AvlNode<AnyType> remove( AnyType x, AvlNode<AnyType> t ) {
-	// FINISH ME
+	// start
+        if (t == null) {
+            return null;
+        }
+        int compareResult = x.compareTo(t.element);
+        if (compareResult > 0) {
+            t.right = ((remove(x, t.right)));
+        } else if (compareResult < 0) {
+            t.left = (remove(x, t.left));
+        } else {
+            if (t.left == null) {
+                return t.right;
+            } else if (t.right == null) {
+                return t.left;
+            } else {
+                AvlNode<AnyType> temp = findMax(t.left);
+                t.element = (AnyType) temp.element;
+                t.left = (remove(temp.element,t.left));
+            }
+        }
+        return balance(t);
     }
 
     /**
