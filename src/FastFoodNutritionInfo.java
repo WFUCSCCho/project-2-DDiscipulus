@@ -20,11 +20,11 @@ public class FastFoodNutritionInfo implements Comparable <FastFoodNutritionInfo>
     private Double protein;
 
     // array to store objects from data file
-    static ArrayList<FastFoodNutritionInfo> allFFN = new ArrayList<FastFoodNutritionInfo>();
+    static public ArrayList<FastFoodNutritionInfo> allFFN = new ArrayList<FastFoodNutritionInfo>();
 
 
     // default constructor
-    public FastFoodNutritionInfo() {
+    public FastFoodNutritionInfo(FastFoodNutritionInfo item) {
         this.company = "unknown";
         this.item = "unknown";
         this.calories = 0.0;

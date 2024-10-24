@@ -6,7 +6,27 @@ import java.util.Scanner;
 import java.util.Collections;
 
 public class Proj2 {
+    public static void copyFFNList(ArrayList<FastFoodNutritionInfo> newList){
+        for (FastFoodNutritionInfo item : FastFoodNutritionInfo.allFFN  ) {
+            // Creating a new instance of each element
+            newList.add(new FastFoodNutritionInfo(item));
+        }
+    }
+    public static void insertListToTree(BST tree, ArrayList<FastFoodNutritionInfo> list){
+        for (FastFoodNutritionInfo item : FastFoodNutritionInfo.allFFN  ) {
+            // Creating a new instance of each element
+            tree.insert(new FastFoodNutritionInfo(item));
+        }
+    }
+    public static void insertListToTree(AvlTree tree, ArrayList<FastFoodNutritionInfo> list){
+        for (FastFoodNutritionInfo item : FastFoodNutritionInfo.allFFN  ) {
+            // Creating a new instance of each element
+            tree.insert(new FastFoodNutritionInfo(item));
+        }
+    }
     public static void main(String[] args) throws IOException {
+        System.out.println("Working Directory = " + System.getProperty("user.dir"));
+
         // Use command line arguments to specify the input file
         if (args.length != 2) {
             System.err.println("Usage: java TestAvl <input file> <number of lines>");
@@ -26,8 +46,32 @@ public class Proj2 {
 
         // ignore first line
         inputFileNameScanner.nextLine();
+//-
+	// started
+        // read the dataset and put it in an ArrayList
+        FastFoodNutritionInfo.readFastFoodData("C:\\Users\\desti\\Documents\\project-1-part-2-DDiscipulus\\src\\Edited(4)FFNData.csv");
+ // initialize our lists
+    ArrayList<FastFoodNutritionInfo> unsortedList = null;
+    ArrayList<FastFoodNutritionInfo> sortedList = null;
 
-	// FINISH ME
+// fill our lists
+    copyFFNList(unsortedList);
+    copyFFNList(sortedList);
+
+    // sort and scramble
+        Collections.sort(sortedList);
+        Collections.shuffle(unsortedList);
+
+
+        // make our trees
+        BST<FastFoodNutritionInfo> sortedBST = new BST<>();
+        BST<FastFoodNutritionInfo> unSortedBST = new BST<>();
+        AvlTree<FastFoodNutritionInfo> sortedAvl = new AvlTree<>();
+        AvlTree<FastFoodNutritionInfo> unsortedAvl = new AvlTree<>();
+
+        // inserts
+
+
 
     }
 }
