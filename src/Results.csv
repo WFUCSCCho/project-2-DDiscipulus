@@ -1,0 +1,44 @@
+Trial 1:
+BST Unsorted: 50 lines 
+	 Insert Time: 0.0079592 sec
+	 Search Time: 7.52E-5 sec
+BST Sorted: 50 lines 
+	 Insert Time: 0.0115348 sec
+	 Search Time: 7.67E-5 sec
+
+AVL Unsorted: 50 lines 
+	 Insert Time: 2.285E-4 sec
+	 Search Time: 9.05E-5 sec
+AVL Sorted: 50 lines 
+	 Insert Time: 2.004E-4 sec
+	 Search Time: 7.26E-5 sec
+
+Inserts Trial: 2
+BST Unsorted: 100 lines 
+	 Insert Time: 0.0042362 sec
+	 Search Time: 8.24E-5 sec
+BST Sorted: 100 lines 
+	 Insert Time: 0.0034511 sec
+	 Search Time: 8.6E-5 sec
+
+AVL Unsorted: 100 lines 
+	 Insert Time: 2.147E-4 sec
+	 Search Time: 4.98E-5 sec
+AVL Sorted: 100 lines 
+	 Insert Time: 1.679E-4 sec
+	 Search Time: 5.39E-5 sec
+
+Inserts Trial: 3
+BST Unsorted: 301 lines 
+	 Insert Time: 0.0025109 sec
+	 Search Time: 1.557E-4 sec
+BST Sorted: 301 lines 
+	 Insert Time: 0.003373 sec
+	 Search Time: 2.1E-6 sec
+
+AVL Unsorted: 301 lines 
+	 Insert Time: 1.789E-4 sec
+	 Search Time: 6.71E-5 sec
+AVL Sorted: 301 lines 
+	 Insert Time: 2.343E-4 sec
+	 Search Time: 1.6E-6 sec
