@@ -65,18 +65,24 @@ Run your program several times for different number of lines of your dataset, N,
 Using your favorite graphing software (e.g., MS Excel or Google Sheets), plot the running time (in seconds) and rate (in seconds per node) vs. N for each case, comparing the BST and AVL Trees (i.e., two lines per graph). Take a screenshot of your graph and put them here by modifying this file, committing, and pushing it to this repository.
 
 BST vs. AVL Tree running time (insertion):
-(insert here)
+![InsertionTimeGraph](https://github.com/user-attachments/assets/64e16361-9525-4888-a3a5-08a3542d4584)
+
 
 BST vs. AVL Tree running time (search):
-(insert here)
+![SearchTimeGraph](https://github.com/user-attachments/assets/33d3ea44-a841-401b-b017-c0d229d365d1)
+
+
 
 BST vs. AVL Tree running rate (insertion):
-(insert here)
+![InsertRateGraph](https://github.com/user-attachments/assets/5515f749-8387-4484-8dc4-787af752ba69)
+
 
 BST vs. AVL Tree running rate (search):
-(insert here)
+![RateSearchG](https://github.com/user-attachments/assets/f868a0a1-e2a6-49b7-9088-a9a29d31ea8f)
 
-## Submission:
+
+
+
 
 Your project will be developed and graded via GitHub. Your final "push" is your final submission, and it must occur before it is due. On Canvas, enter the url to your Github repository. Your project will not be graded without it.
 
