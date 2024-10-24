@@ -188,7 +188,7 @@ public class AvlTree<AnyType extends Comparable<? super AnyType>> {
     private AvlNode<AnyType> insert( AnyType x, AvlNode<AnyType> t ) {
         //finished (courtesy of slide 9 on AVL
         //root = insert( x, root );
-        if (root == null) {
+        if (t == null) {
             return new AvlNode<>(x, null, null);
         }
         int compareResult = x.compareTo(t.element);
@@ -330,7 +330,7 @@ public class AvlTree<AnyType extends Comparable<? super AnyType>> {
      */
     private AvlNode<AnyType> doubleWithLeftChild( AvlNode<AnyType> k3 ) {
         //finished
-        k3.left = rotateWithLeftChild(k3.left);
+        k3.left = rotateWithRightChild(k3.left);
         return rotateWithLeftChild(k3);
 
     }
@@ -343,7 +343,7 @@ public class AvlTree<AnyType extends Comparable<? super AnyType>> {
      */
     private AvlNode<AnyType> doubleWithRightChild( AvlNode<AnyType> k1 ) {
 	// started
-        k1.left = rotateWithLeftChild(k1.right);
+        k1.right = rotateWithLeftChild(k1.right);
         return rotateWithRightChild(k1);
 
     }
