@@ -24,6 +24,18 @@ public class Proj2 {
             tree.insert(new FastFoodNutritionInfo(item));
         }
     }
+    public static void treeSearching(AvlTree tree){
+        for (FastFoodNutritionInfo item : FastFoodNutritionInfo.allFFN  ) {
+            // Creating a new instance of each element
+            tree.contains(new FastFoodNutritionInfo(item));
+        }
+    }
+    public static void treeSearching(BST tree){
+        for (FastFoodNutritionInfo item : FastFoodNutritionInfo.allFFN  ) {
+            // Creating a new instance of each element
+            tree.search(new FastFoodNutritionInfo(item));
+        }
+    }
     public static void main(String[] args) throws IOException {
         System.out.println("Working Directory = " + System.getProperty("user.dir"));
 
@@ -66,10 +78,16 @@ public class Proj2 {
         // make our trees
         BST<FastFoodNutritionInfo> sortedBST = new BST<>();
         BST<FastFoodNutritionInfo> unSortedBST = new BST<>();
+
         AvlTree<FastFoodNutritionInfo> sortedAvl = new AvlTree<>();
         AvlTree<FastFoodNutritionInfo> unsortedAvl = new AvlTree<>();
 
         // inserts
+        insertListToTree(unSortedBST,unsortedList);
+        insertListToTree(sortedBST,sortedList);
+
+        insertListToTree(unsortedAvl,unsortedList);
+        insertListToTree(sortedAvl,sortedList);
 
 
 
