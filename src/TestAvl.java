@@ -1,3 +1,9 @@
+/**
+ * @ BST.AvlTree
+ * @ This program tests for common bugs in an AVL Tree
+ * @ author:Professor Cho
+ * @ date: Oct 10, 2024
+ */
 public class TestAvl {
     // Test program
     public static void main( String [ ] args ) {

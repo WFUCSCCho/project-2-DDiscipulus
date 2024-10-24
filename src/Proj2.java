@@ -1,3 +1,9 @@
+/**
+ * @ BST.AvlTree
+ * @ This program makes various lists from the FFN datasets and tracks the speed BST and AVL trees search and insert elements within
+ * @ author: Destiny
+ * @ date: Oct 23, 2024
+ */
 import java.io.*;
 import java.util.ArrayList;
 import java.util.Scanner;
@@ -86,7 +92,8 @@ public class Proj2 {
     }
 
     public static void main(String[] args) throws IOException {
-        System.out.println("Working Directory = " + System.getProperty("user.dir"));
+        // clears previous result files
+        new PrintWriter("C:\\Users\\desti\\Documents\\project-2-DDiscipulus\\src\\Results.csv").close();
 
         String inputFileName = "C:\\Users\\desti\\Documents\\project-1-part-2-DDiscipulus\\src\\Edited(4)FFNData.csv";
         int numLines = 100;
@@ -218,7 +225,7 @@ public class Proj2 {
         Collections.sort(sortedList);
         Collections.shuffle(unsortedList);
 
-        writeToFileAndPrint("Inserts Trial: 2");
+        writeToFileAndPrint("Trial: 2");
 
 // BST Unsorted
         start1 = System.nanoTime(); // start time
@@ -290,7 +297,7 @@ public class Proj2 {
         Collections.sort(sortedList);
         Collections.shuffle(unsortedList);
 
-        writeToFileAndPrint("Inserts Trial: 3");
+        writeToFileAndPrint("Trial: 3");
 
 // BST Unsorted
         start1 = System.nanoTime(); // start time

@@ -1,44 +1,44 @@
 Trial 1:
 BST Unsorted: 50 lines 
-	 Insert Time: 0.0101162 sec
-	 Search Time: 8.33E-5 sec
+	 Insert Time: 0.0079592 sec
+	 Search Time: 7.52E-5 sec
 BST Sorted: 50 lines 
-	 Insert Time: 0.0113996 sec
-	 Search Time: 9.91E-5 sec
+	 Insert Time: 0.0115348 sec
+	 Search Time: 7.67E-5 sec
 
 AVL Unsorted: 50 lines 
-	 Insert Time: 3.208E-4 sec
-	 Search Time: 8.25E-5 sec
+	 Insert Time: 2.285E-4 sec
+	 Search Time: 9.05E-5 sec
 AVL Sorted: 50 lines 
-	 Insert Time: 2.127E-4 sec
-	 Search Time: 6.3E-5 sec
+	 Insert Time: 2.004E-4 sec
+	 Search Time: 7.26E-5 sec
 
 Inserts Trial: 2
 BST Unsorted: 100 lines 
-	 Insert Time: 0.0036553 sec
-	 Search Time: 1.041E-4 sec
+	 Insert Time: 0.0042362 sec
+	 Search Time: 8.24E-5 sec
 BST Sorted: 100 lines 
-	 Insert Time: 0.0031494 sec
-	 Search Time: 9.08E-5 sec
+	 Insert Time: 0.0034511 sec
+	 Search Time: 8.6E-5 sec
 
 AVL Unsorted: 100 lines 
-	 Insert Time: 2.252E-4 sec
-	 Search Time: 4.28E-5 sec
+	 Insert Time: 2.147E-4 sec
+	 Search Time: 4.98E-5 sec
 AVL Sorted: 100 lines 
-	 Insert Time: 2.357E-4 sec
-	 Search Time: 6.73E-5 sec
+	 Insert Time: 1.679E-4 sec
+	 Search Time: 5.39E-5 sec
 
 Inserts Trial: 3
 BST Unsorted: 301 lines 
-	 Insert Time: 0.0031969 sec
-	 Search Time: 2.093E-4 sec
+	 Insert Time: 0.0025109 sec
+	 Search Time: 1.557E-4 sec
 BST Sorted: 301 lines 
-	 Insert Time: 0.0032026 sec
-	 Search Time: 1.7E-6 sec
+	 Insert Time: 0.003373 sec
+	 Search Time: 2.1E-6 sec
 
 AVL Unsorted: 301 lines 
-	 Insert Time: 2.024E-4 sec
-	 Search Time: 7.08E-5 sec
+	 Insert Time: 1.789E-4 sec
+	 Search Time: 6.71E-5 sec
 AVL Sorted: 301 lines 
-	 Insert Time: 2.065E-4 sec
-	 Search Time: 1.3E-6 sec
+	 Insert Time: 2.343E-4 sec
+	 Search Time: 1.6E-6 sec

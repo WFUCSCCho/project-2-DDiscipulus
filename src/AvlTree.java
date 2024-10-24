@@ -1,3 +1,10 @@
+/**
+ * @ BST.AvlTree
+ * @ This program implements an AVL tree
+ * @ author: Destiny & Professor Cho
+ * @ date: Oct 21, 2024
+ */
+
 // AvlTree class
 //
 // CONSTRUCTION: with no initializer
@@ -131,7 +138,7 @@ public class AvlTree<AnyType extends Comparable<? super AnyType>> {
 
     private static final int ALLOWED_IMBALANCE = 1;
 
-    // Assume t is either balanced or within one of being balanced
+    // Balances a tree to maintain properties of AVL tree
     private AvlNode<AnyType> balance( AvlNode<AnyType> t ) {
         // finished (courtesy of slide 9 on AVL)
         if (t == null) return t;
@@ -158,7 +165,7 @@ public class AvlTree<AnyType extends Comparable<? super AnyType>> {
         return t;
     }
 
-
+// checks that tree is balanced
     public void checkBalance( ) {
         checkBalance( root );
     }
@@ -168,6 +175,7 @@ public class AvlTree<AnyType extends Comparable<? super AnyType>> {
         root = null;
     }
 
+// checks to ensure tree is balanced
     private int checkBalance( AvlNode<AnyType> t ) {
         if( t == null )
             return -1;
@@ -354,10 +362,7 @@ public class AvlTree<AnyType extends Comparable<? super AnyType>> {
     }
 
 
-    // helper
-
-
-
+// constructor
     private static class AvlNode<AnyType> {
         // Constructors
         AvlNode( AnyType theElement ) {
