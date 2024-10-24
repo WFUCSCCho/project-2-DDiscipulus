@@ -163,6 +163,11 @@ public class AvlTree<AnyType extends Comparable<? super AnyType>> {
         checkBalance( root );
     }
 
+    // clears the tree
+    public void clear() {
+        root = null;
+    }
+
     private int checkBalance( AvlNode<AnyType> t ) {
         if( t == null )
             return -1;
